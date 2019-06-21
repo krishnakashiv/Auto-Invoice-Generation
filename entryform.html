@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html>
+<head>
+    
+     
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="css/project.css">
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<mets charset="utf-8">
+<style>
+    body{
+        align-content: center;
+    }
+input[type=text], select {
+  width: 100%;
+    align-content: center;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+    input[type=date], select {
+  width:100%;
+    align-content: center;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+    input[type=text]:focus {
+  border: 3px solid #555;
+        
+}
+    input[type=date]:focus {
+  border: 3px solid #555;
+}
+    input[type=date]:focus {
+  border: 3px solid #555;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+    tr{
+        align-content: center;
+        align-self: center;
+    }
+    td{
+        width: 60%;
+        
+    }
+</style></mets>
+    
+</head>
+<div id="container">
+    <div id="jumbotron">
+<body>
+    
+    <div class="menu-bar">
+    <ul>
+        <li><a href=""><i class="fa fa-user"></i>Profile</a>
+            <div class="sub-menu-2">
+                <ul>
+                    <li><a href="">Logout</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="indexp.html"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href=""><i class="fa fa-users"></i>Clients</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="">List</a></li>
+                    <li><a href="">Add</a></li>
+                    <li><a href="">Update</a></li>
+                    <li><a href="">Delete</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="entryform.html"><i class="fa fa-newspaper-o"></i>Build Delivery Challan</a></li>
+        <li><a href=""><i class="fa fa-map-marker"></i>Delivery</a></li>
+        <li><a href=""><i class="fa fa-object-group"></i>Generate Bill</a></li>
+        <li><a href=""><i class="fa fa-user"></i>About Us</a></li>
+        <li><a href=""><i class="fa fa-phone"></i>Contact Us</a></li>
+    </ul>
+    </div>
+    
+<h1 style="text-align:center">Entry Form</h1>
+
+    <form action="entry.php" method="post">
+         <table style="align-content: center" align="center">
+             <tr>
+<select align="center" style="align-content: center">
+  <option value="Client-1">ABC</option>
+  <option value="Client-2">BCD</option>
+  <option value="Client-3">CDE</option>
+  
+</select>
+             </tr>
+
+        <tr><td><h3>Client ID:</h3></td><td> <input type="text" name="cid"><br></td></tr>
+<tr><td><h3>Challan No:</h3></td><td >  <input type="text" name="chno" ><br></td></tr>
+    <tr><td> <h3>Date of Arrival</h3> </td><td><input type="date" name="date" ><br> </td></tr>
+
+ <tr><td><h3>Order Id: </h3></td><td><input type="text" name="oid" ><br> </td></tr>
+
+    
+    </table>
+<input type="submit" value="Submit form" style="font-size: 100%">
+        
+    </form>
+    
+    </body>
+    </div></div>
+</html>
