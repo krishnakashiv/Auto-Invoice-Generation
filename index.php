@@ -1,6 +1,23 @@
 <?php
 //index.php
+$cid=$_POST['cid'];
+$chno=$_POST['chno'];
+$date=$_POST['date'];
+session_start();
+$conn=mysqli_connect('localhost','root','','main');
 
+$sql="INSERT INTO CHALLAN(challanno,cid,arrivaldate) VALUES ('$chno','$cid','$date')";
+ if(mysqli_query($conn,$sql))
+{
+    echo " ";
+} 
+
+$sql1="SELECT orderid FROM CHALLAN where challanno='$chno'";
+ 
+$result=mysqli_query($conn,$sql1);
+ $row = mysqli_fetch_row($result);
+    $order_id = $row[0];
+$_SESSION['orderid'] = $order_id;
 $connect = new PDO("mysql:host=localhost;dbname=main", "root", "");
 function fill_unit_select_box($connect)
 { 
@@ -28,10 +45,23 @@ function fill_unit_select_box($connect)
  <body>
   <br />
   <div class="container">
-   <h3 align="center">Add Remove Select Box Fields Dynamically using jQuery Ajax in PHP</h3>
+   <h3 align="center">Add Remove Select Items</h3>
    <br />
    <h4 align="center">Enter Item Details</h4>
    <br />
+      <div id="container">
+          <div id="jumbotron">
+      <table align="center">
+      <tr>
+          <th style="width: 30%;">Client ID: <?php echo $cid ?></th>
+          <th style="width: 30%;">Challan No: <?php echo $chno ?></th>
+          <th style="width: 30%;">Date: <?php echo $date ?></th>
+          <th style="width: 30%;">Order ID: <?php echo $order_id ?></th>
+          </tr>
+        
+      </table>
+          </div></div>
+      <br>
    <form method="post" id="insert_form">
     <div class="table-repsonsive">
      <span id="error"></span>
